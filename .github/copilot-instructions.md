@@ -178,3 +178,6 @@ RSS 源发现 → Background 消息处理 → Dexie 数据库 → 定时抓取 �
 - **AI_CONSTITUTION.md**: Core evolution mechanism (read before every session)
 - **AI_INITIALIZATION.md**: Mandatory 4-skill initialization protocol (execute before every response)
 - **AGENTS.md**: Skills registry with Tier 1-3 system
+
+<!-- evoskills: auto-generated references -->
+- See EXECUTION_RULES.md for optional safety guardrails
