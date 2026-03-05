@@ -20,11 +20,8 @@
 .github/PR_DESCRIPTION*.md
 .github/COMMIT_DESCRIPTION*.md
 
-# Claude / OpenSkills - installation artifacts
-# Skills are installed on-demand via: openskills install wxy/<skill-name>
-# Sync with: openskills sync -y
-.claude/
-.agent/
+# evoskills installation (managed by evoskills CLI)
+.agent/skills/
 
 # debug
 npm-debug.log*

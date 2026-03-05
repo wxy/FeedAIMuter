@@ -1,0 +1,7 @@
+{
+  "version": "3.0.0",
+  "installedAt": "2026-03-05T03:53:43Z",
+  "skillsDir": ".agent/skills",
+  "openskillsCompatible": true,
+  "skillsRepo": "https://github.com/wxy/evoskills"
+}

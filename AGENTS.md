@@ -127,92 +127,92 @@ Usage notes:
 <!-- SKILLS_TABLE_END -->
 
 <!-- PROJECT_SKILLS_START -->
-<!-- 可进化技能从 copilot-evolution-skills 仓库集成: https://github.com/wxy/copilot-evolution-skills -->
-<!-- 通过 Git Submodule 自动同步，使用 update.sh 可获取最新版本 -->
+<!-- 可进化技能从 evoskills 仓库集成: https://github.com/wxy/evoskills -->
+<!-- 通过 evoskills CLI 自动同步，使用 evoskills update 可获取最新版本 -->
 
 <project_skills>
 <skill>
 <name>_change-summary</name>
 <description>自动汇总当前分支相对主分支的提交摘要，用于 PR/说明对齐。</description>
-<file>.evolution-skills/skills/_change-summary/SKILL.md</file>
+<file>.agent/skills/_change-summary/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_code-health-check</name>
 <description>代码健康检查技能。在代码提交前进行全面的质量检查，包括 VSCode 错误面板、TypeScript 编译、Linting、测试覆盖率等。确保代码质量，防止隐蔽的故障。</description>
-<file>.evolution-skills/skills/_code-health-check/SKILL.md</file>
+<file>.agent/skills/_code-health-check/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_context-ack</name>
 <description>在每次回复中使用固定前缀并列出本次实际参考的指令/文件，便于校验是否遵循上下文与规则。</description>
-<file>.evolution-skills/skills/_context-ack/SKILL.md</file>
+<file>.agent/skills/_context-ack/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_evolution-core</name>
 <description>进化能力元技能。用于识别可进化场景（重复错误、用户反馈、复杂工作流），并将经验沉淀为可复用技能或指令更新。</description>
-<file>.evolution-skills/skills/_evolution-core/SKILL.md</file>
+<file>.agent/skills/_evolution-core/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_execution-precheck</name>
 <description>执行前检查清单。每次回复前必须自动进行的自我检查，确保没有遗漏强制规则。这是最高优先级的纪律规则，用于防止"遗忘"类的自我欺骗。</description>
-<file>.evolution-skills/skills/_execution-precheck/SKILL.md</file>
+<file>.agent/skills/_execution-precheck/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_file-output-guard</name>
 <description>创建/输出文件的安全约束。禁止 HERE 文档创建文件；大文件输出需分段写入同一文件，避免会话超限。</description>
-<file>.evolution-skills/skills/_file-output-guard/SKILL.md</file>
+<file>.agent/skills/_file-output-guard/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_git-commit</name>
 <description>Git 提交最佳实践。提供规范化提交流程、说明文件模板、Conventional Commits 格式指导。用于确保提交信息清晰、一致、便于追踪。</description>
-<file>.evolution-skills/skills/_git-commit/SKILL.md</file>
+<file>.agent/skills/_git-commit/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_instruction-guard</name>
 <description>强制在每次回复前读取项目指令文件，避免遗漏规范。与 _context-ack 配合，仅负责“读取约束”，不负责输出格式。</description>
-<file>.evolution-skills/skills/_instruction-guard/SKILL.md</file>
+<file>.agent/skills/_instruction-guard/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_pr-creator</name>
 <description>PR 创建与版本控制流程技能。智能分析提交、生成 PR、管理版本号。支持多语言模板、自动检测版本策略。</description>
-<file>.evolution-skills/skills/_pr-creator/SKILL.md</file>
+<file>.agent/skills/_pr-creator/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_release-process</name>
 <description>完整的发布流程技能。包括发布分支创建、测试检查、文档更新（多语言）、截图验证、Chrome Store 物料准备、PR 创建（使用 _pr-creator 技能）、用户手工合并、GitHub Release 创建、构建压缩包等全链路工作。采用分支隔离策略，确保 master 分支稳定。</description>
-<file>.evolution-skills/skills/_release-process/SKILL.md</file>
+<file>.agent/skills/_release-process/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_session-safety</name>
 <description>会话输出安全控制。防止超长输出导致失败，必要时分段写入文件。</description>
-<file>.evolution-skills/skills/_session-safety/SKILL.md</file>
+<file>.agent/skills/_session-safety/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_skills-manager</name>
-<description>用于管理 copilot-evolution-skills 技能库的更新、贡献和维护。当用户请求"更新技能"、"贡献技能"或"检查技能版本"时使用。</description>
-<file>.evolution-skills/skills/_skills-manager/SKILL.md</file>
+<description>用于管理 evoskills 技能库的更新、贡献和维护。当用户请求"更新技能"、"贡献技能"或"检查技能版本"时使用。</description>
+<file>.agent/skills/_skills-manager/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_traceability-check</name>
 <description>校验“说明内容 ↔ 实际变更文件”的一致性，避免描述遗漏或偏差。</description>
-<file>.evolution-skills/skills/_traceability-check/SKILL.md</file>
+<file>.agent/skills/_traceability-check/SKILL.md</file>
 </skill>
 
 <skill>
 <name>_typescript-type-safety</name>
 <description>TypeScript Mock 数据创建与类型错误预防。用于修复与预防测试中的类型错误与 mock 构造缺陷。</description>
-<file>.evolution-skills/skills/_typescript-type-safety/SKILL.md</file>
+<file>.agent/skills/_typescript-type-safety/SKILL.md</file>
 </skill>
 
 </project_skills>
@@ -220,3 +220,128 @@ Usage notes:
 <!-- PROJECT_SKILLS_END -->
 
 </skills_system>
+
+<!-- EVOSKILLS_START -->
+<skills_system priority="1">
+
+## Available Skills (evoskills)
+
+<!--
+SKILLS_TABLE_START -->
+<usage>
+When users ask you to perform tasks, check if any of the
+available skills below can help complete the task more effectively. Skills provide
+specialized capabilities and domain knowledge.
+
+How to use skills:
+- Invoke: Bash("npx openskills read <skill-name>")
+- The skill content will load with detailed instructions on how to complete the task
+- Base directory provided in output for resolving bundled resources (references/, scripts/, assets/)
+
+Usage notes:
+- Only use skills listed in <available_skills> below
+- Do not invoke a skill that is already loaded in your context
+- Each skill invocation is stateless
+</usage>
+
+<available_skills>
+
+<!-- Tier 1: Core Skills (2) - Evolution Infrastructure -->
+
+<skill>
+<name>_evolution-core</name>
+<description>Identify improvement opportunities and patterns in code and processes. Proposes enhancements based on architectural patterns and best practices. Core mechanism of continuous system evolution.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_skills-manager</name>
+<description>Core skill manager for evoskills. Handles skill lifecycle (init, install, remove, update) and skill contributions. Core mechanism managing the skill ecosystem.</description>
+<location>project</location>
+</skill>
+
+
+<!-- Tier 2: System Skills (4) - Required for Safe Operation -->
+
+<skill>
+<name>_instruction-guard</name>
+<description>Read and apply directives before processing each request. Enforces instruction hierarchy and prevents instruction conflicts.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_context-ack</name>
+<description>Format responses with clear headers, footers, and reference lists. Ensures proper context acknowledgment and response structure.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_file-output-guard</name>
+<description>Validate and safeguard all file creation operations. Prevents unsafe file creation patterns and unauthorized modifications.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_execution-precheck</name>
+<description>Validate dependencies and runtime requirements before executing commands. Ensures all prerequisites are met before task execution.</description>
+<location>project</location>
+</skill>
+
+
+<!-- Tier 3: Optional Skills (8) - User-Selectable Enhancements -->
+
+<skill>
+<name>_git-commit</name>
+<description>Implement conventional commits workflow. Ensures proper commit message formatting and semantic versioning compliance.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_pr-creator</name>
+<description>Automate PR generation with version detection and release notes. Streamlines contributions and version management.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_release-process</name>
+<description>Execute complete release workflow. Coordinates versioning, tagging, and publication of releases.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_code-health-check</name>
+<description>Perform quality checks before commit. Validates code standards, security, and architectural consistency.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_typescript-type-safety</name>
+<description>Enforce TypeScript type safety guidelines. Ensures proper typing and prevents type-related runtime errors.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_change-summary</name>
+<description>Summarize completed work sessions. Provides concise summaries of changes and progress made.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_traceability-check</name>
+<description>Ensure all decisions are properly documented. Validates decision traceability and documentation completeness.</description>
+<location>project</location>
+</skill>
+
+<skill>
+<name>_session-safety</name>
+<description>Prevent state violations and session inconsistencies. Maintains context integrity and prevents conflicting actions.</description>
+<location>project</location>
+</skill>
+
+
+</available_skills>
+<!--
+SKILLS_TABLE_END -->
+
+</skills_system>
+<!-- EVOSKILLS_END -->

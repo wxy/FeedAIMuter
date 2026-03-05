@@ -8,15 +8,28 @@ applyTo: "**"
 
 ## Part 1: 强制执行
 
-**⚠️ 在开始任何工作前，必须读取并完全理解 AI 宪法**：
-请查阅 `.evolution-skills/constitution/ai-evolution-constitution.md`（通过 attachment 在 VS Code 中自动加载）
+**⚠️ 在开始任何工作前，必须读取并完全理解 AI 宪法与初始化协议**：
+请查阅：
+- `.github/AI_CONSTITUTION.md` - AI 进化宪法（核心原则）
+- `.github/AI_INITIALIZATION.md` - 强制初始化协议（4 技能执行序列）
 
-### 宪法的 5 部分结构
-1. **Part 1: 核心原则** - 持续学习、模块化技能架构
-2. **Part 2: 强制执行规则** - Rule 1-4（指令守卫、上下文确认、文件输出守卫、会话安全）
-3. **Part 3: 执行前检查协议** - 每次回复前的 6 步检查（最高优先级）
-4. **Part 4: 技能激活体系** - Tier 1-3（强制执行、条件强制、显式请求）
-5. **Part 5: 通用角色与对话风格** - 交流规范
+### 核心系统架构
+
+1. **AI Constitution** (`.github/AI_CONSTITUTION.md`) - 持续进化的核心原则
+   - Part 1: 持续学习与自我改进
+   - Part 2: 进化触发条件
+   - Part 3: 技能模块化原则
+   - Part 4: 指令与技能分工
+
+2. **Initialization Protocol** (`.github/AI_INITIALIZATION.md`) - 每次响应前必须强制执行
+   - 4 个 Tier 2 系统技能的强制初始化序列
+   - 带可验证的执行标记
+   - 非可选的强制约束
+
+3. **Skills System** (`AGENTS.md`) - 14 个技能的模块化体系
+   - Tier 1: 2 个核心技能（进化基础设施）
+   - Tier 2: 4 个必需系统技能（安全/运行时基线）
+   - Tier 3: 8 个可选技能（工作流增强）
 
 ### 🎯 最高优先级
 
@@ -33,12 +46,15 @@ applyTo: "**"
 - **Tier 2 条件强制**：当条件满足时自动触发，但在执行修改前询问用户确认
 - **用户保有控制权**：对所有修改类的技能操作（Tier 2-3）都要获得用户同意
 
-### 📖 参考文档
+### 📖 核心参考文档
 
-- **技能定义规范**：`.evolution-skills/SKILL_DEFINITION_SPECIFICATION.md`（通过 attachment 自动加载）
+- **技能定义规范**：查阅 evoskills 仓库中的 [SKILL_DEFINITION_SPECIFICATION.md](https://github.com/wxy/evoskills/blob/main/SKILL_DEFINITION_SPECIFICATION.md)
   - 所有技能文件应遵循的格式
   - 元数据、触发条件、依赖声明、用户交互点
-- **重构分析**（供参考）：[./AI_CONSTITUTION_REFACTOR_ANALYSIS.md](./AI_CONSTITUTION_REFACTOR_ANALYSIS.md)
+- **技能管理**：使用 `evoskills` CLI 命令
+  - `evoskills list` - 查看所有可用技能
+  - `evoskills install <skill-name>` - 安装新技能
+  - `evoskills update` - 更新所有已安装的技能
 
 ## Part 2: 项目特定 - SilentFeed 工程规范
 
@@ -140,12 +156,12 @@ RSS 源发现 → Background 消息处理 → Dexie 数据库 → 定时抓取 �
 **提交与 PR 说明**：
 创建 PR 或提交时，**必须使用说明文件方式**，禁止在命令行使用长篇幅说明：
 
-1. **Git 提交**: 参考 `_git-commit` 技能（`.copilot/skills/_git-commit/SKILL.md`）
+1. **Git 提交**: 参考 `_git-commit` 技能（`.agent/skills/_git-commit/SKILL.md`）
   - 在 `.github/COMMIT_DESCRIPTION.local.md` 中编写说明（本地文件，不入库）
-   - 使用 Conventional Commits 规范
+  - 使用 Conventional Commits 规范
   - 执行 `git commit -F .github/COMMIT_DESCRIPTION.local.md`
 
-2. **GitHub PR**: 使用官方 `pr-creator` 技能
+2. **GitHub PR**: 使用官方 `_pr-creator` 技能（`.agent/skills/_pr-creator/SKILL.md`）
   - 在 `.github/PR_DESCRIPTION.local.md` 中编写说明（本地文件，不入库）
 
 ### ⚠️ 常见坑位
@@ -155,3 +171,10 @@ RSS 源发现 → Background 消息处理 → Dexie 数据库 → 定时抓取 �
 - **i18n 遗漏**: UI 文本未包裹 `_()` 会在审查时被要求修复；测试中使用英文翻译文件做断言
 
 ---
+
+---
+
+<!-- evoskills: auto-generated references (do not edit) -->
+- **AI_CONSTITUTION.md**: Core evolution mechanism (read before every session)
+- **AI_INITIALIZATION.md**: Mandatory 4-skill initialization protocol (execute before every response)
+- **AGENTS.md**: Skills registry with Tier 1-3 system
